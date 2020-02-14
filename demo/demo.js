@@ -18,7 +18,7 @@ export default class Demo extends Component {
     super(props);
 
     this.state = {
-      playing: true,
+      playing: false,
       lightMode: true
     };
 
@@ -49,7 +49,7 @@ export default class Demo extends Component {
       }}>
         <Song
           playing={this.state.playing}
-          tempo={90}
+          tempo={95}
         >
           <Analyser onAudioProcess={this.handleAudioProcess}>
             <Sequencer

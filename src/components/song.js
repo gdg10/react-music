@@ -93,6 +93,7 @@ export default class Song extends Component {
       prevProps.playing !== this.props.playing) {
       if (this.state.buffersLoaded === true && this.props.playing === true) {
         setTimeout(() => {
+          this.audioContext.resume();
           this.scheduler.start(this.loop);
         }, 0);
       } else {
